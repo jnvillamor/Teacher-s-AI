@@ -1,0 +1,5 @@
+
+DEPENDENCIES INSTALLED 
+
+Vite + React Modules                    | npm install
+TailwindCSS and Peer Dependencies       | npm install -D tailwindcss postcss autoprefixer
