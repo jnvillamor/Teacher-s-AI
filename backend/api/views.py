@@ -90,3 +90,6 @@ class StudentAnswerList(generics.GenericAPIView):
             serializer.save()
             return Response({'status': 'success', 'data': serializer.data}, status=status.HTTP_201_CREATED)
         return Response({'status': 'error', 'data': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+def generate_quiz(request, id):
+    pass
