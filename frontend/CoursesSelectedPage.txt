@@ -1,0 +1,17 @@
+import CourseHeading from './components/CourseHeading';
+import Back from './components/Back';
+import Sort from './components/Sort';
+import QuizHeading from './components/QuizHeading';
+import QuizTable from './components/QuizTable';
+import StudentTable from './components/StudentTable';
+import StudentHeading from './components/StudentHeading';
+import CoursePerformance from './components/CoursePerformance';
+
+      <Sort />
+      <Back />
+      <CourseHeading />
+      <QuizHeading />
+      <QuizTable />
+      <CoursePerformance />
+      <StudentHeading />
+      <StudentTable />

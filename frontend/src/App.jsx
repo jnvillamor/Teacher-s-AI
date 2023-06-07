@@ -1,4 +1,4 @@
-import { useState } from "react";
+import CoursePage from './components/Courses/CoursePage';
 import Sidebar from "./components/Sidebar";
 import QuizGenerateCard from "./components/QuizGenerateCard";
 
@@ -10,6 +10,7 @@ function App() {
       <Sidebar />
       <div className="col-span-4">
         <QuizGenerateCard />
+        <CoursePage />
       </div>
     </div>
   );
