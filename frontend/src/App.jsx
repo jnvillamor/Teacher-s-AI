@@ -1,15 +1,15 @@
-import { useState } from 'react';
+import { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import QuizGenerateCard from "./components/QuizGenerateCard";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
-    <div className='flex h-screen'>
-      <div className='m-auto'>
-        <div className='text-6xl text-red-600'>{count}</div>
-        <button className='px-6 py-2 rounded bg-green-800 hover:bg-green-600 text-white' type='button' onClick={() => setCount(count => count+1)}>
-          count+
-        </button>
+    <div className="md:grid md:grid-cols-5 h-screen bg-dark-gray">
+      <Sidebar />
+      <div className="col-span-4">
+        <QuizGenerateCard />
       </div>
     </div>
   );
