@@ -6,7 +6,7 @@ function App() {
   // const [count, setCount] = useState(0);
 
   return (
-    <div className="md:grid md:grid-cols-5 h-screen bg-dark-gray">
+    <div className="md:grid md:grid-cols-5 h-screen bg-light-black">
       <Sidebar />
       <div className="col-span-4">
         <QuizGenerateCard />
