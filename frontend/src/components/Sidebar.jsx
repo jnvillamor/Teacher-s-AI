@@ -55,14 +55,7 @@ const Sidebar = () => {
         <Button
           variant="contained"
           startIcon={<ExitToAppRoundedIcon />}
-          style={{
-            backgroundColor: "black",
-            justifyContent: "flex-start",
-            textTransform: "none",
-            fontFamily: "Poppins",
-            fontSize: "1.25rem",
-            borderRadius: "0.5rem",
-          }}
+          style={Object.assign({}, buttonStyle)}
           className="w-full"
         >
           Log Out
