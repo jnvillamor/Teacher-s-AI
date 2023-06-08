@@ -10,13 +10,14 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="col-span-4 p-6 rounded-r-lg flex flex-col flex">
-      <div className="flex flex-col mt-[32px] sm:top-54m px-8 items-center">
-        <div className="flex items-left">
-          <ArrowBackIosNewRoundedIcon />
-          <span className="ml-2">Home Page</span>
-        </div>
-      </div>
+    <div className="flex items-center my-8">
+      <ArrowBackIosNewRoundedIcon style={{ fontSize: 32, color: "white" }} />
+      <span
+        className="ml-4 text-4xl text-white"
+        style={{ fontFamily: "Poppins" }}
+      >
+        Courses
+      </span>
     </div>
   );
 };

@@ -1,21 +1,17 @@
 import SearchIcon from "@mui/icons-material/Search";
 import { Input, styled } from "@mui/material";
-import CourseList from "./CourseList";
+import QuizGenerateCard from "./QuizGenerateCard";
 import Header from "../Header";
-
-const CustomizeInput = styled(Input)`
-  background: transparent;
-  border: none;
-  outline: none;
-  color: grey;
-  width: 20em;
-`;
+import GenerateButton from "./GenerateButton";
+import AddButton from "./AddButton";
 
 export default function CoursePage() {
   return (
     <div className="col-span-4 px-14">
       <Header />
-      <CourseList />
+      <QuizGenerateCard />
+      <AddButton />
+      <GenerateButton />
     </div>
   );
 }
