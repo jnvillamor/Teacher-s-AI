@@ -1,4 +1,4 @@
-import CoursePage from "./components/Courses/CoursePage";
+import CoursePage from './components/Courses/CoursePage';
 import Sidebar from "./components/Sidebar";
 import QuizGeneratePage from "./components/QuizGeneration/QuizGeneratePage";
 function App() {
@@ -10,6 +10,8 @@ function App() {
       <div className="col-span-4">
         <CoursePage />
         <QuizGeneratePage />
+        <QuizGenerateCard />
+        <CoursePage />
       </div>
     </div>
   );
