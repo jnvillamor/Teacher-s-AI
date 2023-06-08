@@ -8,5 +8,4 @@ urlpatterns = [
     path('questions/', QuestionList.as_view(), name='question-list'),
     path('student-answers/', StudentAnswerList.as_view(), name='student-answer-list'),
     path('generate_quiz/', generate_quiz, name='generate-quiz'),
-    path('analyze_quiz/', analyze_quiz, name='analyze-quiz')
 ]

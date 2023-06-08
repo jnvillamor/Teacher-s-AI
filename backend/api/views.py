@@ -140,7 +140,7 @@ class StudentAnswerList(generics.GenericAPIView):
 
 
 def generate_quiz(request):
-    file = open("study_guides/SG1-DBMS.txt", "r")
+    file = open("backend/study_guides/SG1-DBMS.txt", "r")
     study_guide = file.read()
     file.close()
 
