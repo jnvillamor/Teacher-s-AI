@@ -1,5 +1,5 @@
 import CoursePage from './components/Courses/CoursePage';
-import QuizGenerateCard from './components/QuizGenerateCard';
+import QuizGeneratePage from './components/QuizGeneration/QuizGeneratePage';
 import QuizPage from './components/QuizPage/QuizPage';
 import Sidebar from './components/Sidebar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -15,7 +15,7 @@ function App() {
           <Routes>
             <Route path='/' element={<CoursePage />} />
             <Route path='/quiz' element={<QuizPage />} />
-            <Route path='/quizgenerate' element={<QuizGenerateCard />} />
+            <Route path='/quizgenerate' element={<QuizGeneratePage />} />
           </Routes>
         </div>
       </BrowserRouter>

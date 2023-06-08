@@ -147,7 +147,10 @@ def generate_quiz(request):
     prompt = f"""
     {study_guide}
 
-    base on the notes above create a 10 item identification question quiz in JSON format with each item contains questions and answer.
+    base on the notes above create a 5 item identification question quiz in JSON format with each item contains question "questions":[
+     "question":
+     "answer":
+    ].
     """
 
     response = openai.Completion.create(
@@ -159,3 +162,54 @@ def generate_quiz(request):
     )
     result = response.choices[0].text
     return JsonResponse({"status": "success", "data": json.loads(result.strip())})
+
+def analyze_quiz(request):
+    prompt = "analyze this result and give me in insight: "
+    results = [
+         {
+            "question": "what is the largest continent",
+            "correct_answer": "asia",
+            "wrong_answers": [
+                {
+                    "name": "robert j",
+                    "answer": "africa"
+                },
+                {
+                    "name": "noel v",
+                    "answer": "africa"
+                },
+                {
+                    "name": "kaye d",
+                    "answer": "europe"
+                },
+            ]
+        },
+        {
+            "question": "who is the president of the ph?",
+            "correct_answer": "bbm",
+            "wrong_answers": [
+                {
+                    "name": "robert j",
+                    "answer": "leni"
+                },
+                {
+                    "name": "robert j",
+                    "answer": "gibo"
+                },
+                {
+                    "name": "robert j",
+                    "answer": "pduts"
+                },
+            ]
+        }
+    ]
+    prompt = prompt + str(results)
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=prompt,
+        max_tokens=1000,
+        temperature=0.8,
+        top_p=1,
+    )
+    final_result = response.choices[0].text
+    return JsonResponse({"status": "success", "data": final_result})
