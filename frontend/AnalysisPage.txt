@@ -1,0 +1,11 @@
+import CourseHeading from './components/CourseHeading';
+import Back from './components/Back';
+import Reply from './components/Reply';
+import QuizHeading from './components/QuizHeading';
+
+
+
+    <Back />
+    <CourseHeading />
+    <QuizHeading />
+    <Reply />

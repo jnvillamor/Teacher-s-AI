@@ -1,15 +1,15 @@
-import { useState } from "react";
+import CoursePage from "./components/Courses/CoursePage";
 import Sidebar from "./components/Sidebar";
-import QuizGenerateCard from "./components/QuizGenerateCard";
-
+import QuizGeneratePage from "./components/QuizGeneration/QuizGeneratePage";
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
-    <div className="md:grid md:grid-cols-5 h-screen bg-dark-gray">
+    <div className="md:grid md:grid-cols-5 h-screen bg-light-black">
       <Sidebar />
       <div className="col-span-4">
-        <QuizGenerateCard />
+        <CoursePage />
+        <QuizGeneratePage />
       </div>
     </div>
   );
