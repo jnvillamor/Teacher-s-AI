@@ -60,3 +60,16 @@ class StudentAnswer(models.Model):
     
     def __str__(self):
         return f'{self.student.name} - {self.question.question} - {self.answer}'
+
+class StudyGuides(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    file = models.FileField(upload_to='study_guides/')
+
+    class Meta:
+        db_table = 'study_guides'
+        verbose_name_plural = 'Study Guides'
+    
+    def __str__(self):
+        return self.name

@@ -1,0 +1,82 @@
+CHAPTER 4 - PROCESSES
+Process
+A program execution: process execution must progress in sequential fashion.
+Includes program counter, stack, and data section.
+I/O bound process: spends more time doing I/O than computations, many short CPU bursts.
+CPU-bound process: spends more time doing computations; few very long CPU bursts.
+States
+New: the process is being created.
+Running: instructions are begin executed.
+Waiting: the process is waiting for some event to occur (e.g., waiting for input).
+Ready: the process is waiting to be assigned to a processor.
+
+Process Control Block (PCB)
+Information with each process:
+Program state
+Program counter
+CPU registers
+CPU scheduling info.
+Memory-management info.
+Accounting info.
+I/O status info.
+Process Scheduling Queues
+Job Queue: set of all processes in the system.
+Ready Queue: set of all processes residing in main memory, ready and waiting to execute.
+Device Queue: set of processes waiting for an I/O device.
+Processes migrate among the various queues.
+Schedulers
+Long-term schedulers (job scheduler)
+selects which processes should be brought into the ready queue.
+Invoked very infrequently (seconds, minutes) -> may be slow.
+Controls the degree of multiprogramming.
+Short-term schedulers (CPU scheduler)
+selects which processes should be executed next and allocates CPU.
+Invoked very frequently (milliseconds) -> must be fast.
+Context Switch
+When CPU switch process, it saves the old process and load the saved state of the new process.
+The system does no useful work while switching (idle).
+
+Process Creation
+Parent processes create child process and so on forming a tree of processes.
+Resource sharing (one of these may happen)
+Parents and children share all resources.
+Children share subset of parent’s resources.
+Parent and child share no resources.
+Execution
+Parent and children execute concurrently.
+Parent waits until children terminate.
+Process Termination
+Process executes last statement and asks the OS to delete (exit)
+Child return data to parent (via wait).
+Process’ resources are deallocated by OS.
+Parent may terminate execution of children processes (abort)
+Child has exceeded allocated resources.
+Task assigning to child is no longer required.
+If parent is exiting
+Some OS do not allow child to continue if its parent terminates.
+All children terminated – cascading termination.
+Cooperating Processes
+Independent: process cannot affect or be affected by the execution of another process
+Cooperating: process can affect or be affected by the execution of another process.
+Advantages of process cooperation:
+Info. Sharing
+Computation speed-up
+Modularity
+Convenience
+Example of Cooperating Process (Producer-Consumer Problem)
+Paradigm for cooperating processes, producer process produces info. that is consumed by a consumer process.
+Unbounded-buffer places no practical limit on the size of the buffer.
+Bounded-buffer assumes that there is fixed buffer size 
+ Interprocess Communication (IPC)
+Provides mechanism for processes to communicate and to synch their actions without sharing the same memory address.
+Message system
+Process communicate with each other w/o resorting to shared variables.
+IPC facility provides two operations:
+Send (message): message size fixed or variable.
+Receive(message)
+If P and Q wish to communicate they need to 
+Establish communication link between them.
+Exchange message via send/receive operations.
+Implementation of links:
+Physical (e.g., shared memory, hardware bus)
+Logical (e.g., logical properties)
